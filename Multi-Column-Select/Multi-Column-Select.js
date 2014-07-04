@@ -35,28 +35,21 @@
             
         //Hide the original select box
         $control.addClass(settings.menuclass).addClass(settings.hideclass);
-        //get elements in dropdown
-            $selectoptions.each(function(e)
-            {
-              //Push count, value and text
-              $optioncount += 1;
-              $optionvals.push($(this).text());
-              $optionids.push($(this).attr('value'));
-            });
-
-        //generate menu button and the container below the orginal select box.
+        
+         //generate menu button and the container below the orginal select box.
         //Adds a clear class so content is pushed down when animated.
         $('.'+$selector)
                     .append("<a class='"+settings.openmenu+"'>"+settings.openmenutext+"</a>\n\
-                                <div class='"+settings.clearclass+"'></div><div class='"+settings.menucontainer+"'></div>");
+                             <div class='"+settings.clearclass+"'></div>\n\
+                             <div class='"+settings.menucontainer+"'></div>");
 
-
-        //Generate the columns of buttons from the supplied class and populate the menu container
-        $.each( $optionvals, function( index, value ) {
-        $('.'+settings.menucontainer).append("<a class='"+ settings.menuitem+"' data='"+ $optionids[index] +"'>" + value + "</a>");
+        //get elements in dropdown
+        $selectoptions.each(function(e)
+        {
+          //Push count, value and text
+          $optioncount += 1;
+          $('.'+settings.menucontainer).append("<a class='"+ settings.menuitem+"' data='"+ $(this).attr('value') +"'>" + $(this).text() + "</a>");
         });
-
-
 
         // check for click event
         // on option click
