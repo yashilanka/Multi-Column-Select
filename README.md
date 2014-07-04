@@ -57,3 +57,7 @@ $(".selectcontrol").MultiColumnSelect({
 
 });
 
+
+<h2>License</h2>
+
+<p>The MIT License (MIT)</p>
