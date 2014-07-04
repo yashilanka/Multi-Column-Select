@@ -72,13 +72,25 @@ $(".selectcontrol").MultiColumnSelect({
 
             menuclass : 'multicolumnselect',     // class given to control
             openmenu : 'openmenubutton',         // used to toggle menu open/closed
-            openmenutext : 'Choose An Option',   // Text for toggle menu button
+            openmenutext : 'Choose',   // Text for toggle menu button
             menucontainer : 'menucontainer',     // Container Class
             menuitem : 'menuitem',               // Item Class
             hideclass : 'hidden',                // hide Class
             openclass : 'open',                  // Open Class
             clearclass : 'clear',                // Clear Class
             duration : 200                       // Animation Duration
+            
+            //TODO
+            
+            onOpenMenu: function(){};
+            onCloseMenu: function(){};
+            on...
+            
+            $.MulticolumnSelect.additem('ID','Value');
+            $.MulticolumnSelect.additem({{'ID','Value'},{'ID','Value'},{'ID','Value'}});
+            $.MulticolumnSelect.removeitem('ID');
+            $.MulticolumnSelect.destroy();
+            $.MulticolumnSelect.create({options});
 
 });
 ```
