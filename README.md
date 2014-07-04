@@ -1,6 +1,8 @@
 <h1>Multi-Column-Select</h1>
 
-<p>Jquery CSS Multi Column Select Box</p>
+<h4>Jquery CSS Multi Column Select Box</h4>
+<p>A Simple plugin that will hide the Select control and then display a multicolumn dropdown (css)</p>
+<p>Uses the original form control so will work if JS is not enabled and the form can be process as normal</p>
 
 
 <h2>Installation</h2>
