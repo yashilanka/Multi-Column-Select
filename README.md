@@ -48,6 +48,23 @@ Include js plugin:
 ```
 Wrap the select control with a div and give that container an ID or class
 
+<h2>CSS</h2>
+
+
+```
+.openmenubutton{
+}
+
+.menucontainer{
+        overflow:hidden;            
+        display:none;                    
+}
+
+.menuitem{
+}
+```
+
+
 <h2>Call the plugin</h2>
 
 ```javascript
