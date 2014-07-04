@@ -14,14 +14,14 @@
 
 /*The container that holds the dropdown items*/
 .menucontainer{
-	width:100%;
+    	width:500px;
 	height:0px;
 	overflow:hidden;
+        background:#222;
 }
 
 /*The menu items (options)*/
-.menuitem,
-.openmenubutton{
+.menuitem{
 	box-sizing: border-box;
 	background:#222;
 	color:#FFF;    
@@ -34,8 +34,22 @@
 	text-align: center;
 }
 
+.openmenubutton{
+	box-sizing: border-box;
+	background:#222;
+	color:#FFF;    
+	text-decoration: none;
+        padding: 0 10px 0 40px;
+	
+	float:left;
+	height: 50px;
+	line-height: 50px;
+	border:1px solid #444;
+	text-align: center;
+}
+
 .menuitem.active{
-	background:#FFF;
+	background:#e8e8e8;
 	color:#222;
 	border:1px solid #222;
 }
