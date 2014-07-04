@@ -8,7 +8,6 @@
 */
 (function ( $ ) {
         
-        
         $.fn.MultiColumnSelect = function( options ) {
         
         var settings = $.extend({
@@ -23,8 +22,6 @@
             duration : 200
         }, options );
 
-            
-            
         $selector = this.selector;
             
         //Plugin Vars
@@ -32,14 +29,12 @@
         $selectoptions = $($selector+' select option');
         $optioncount = 0;   $optionvals = [];   $optionids = [];
             
-            
         //Hide the original select box
         $control.addClass(settings.menuclass).addClass(settings.hideclass);
         
          //generate menu button and the container below the orginal select box.
         //Adds a clear class so content is pushed down when animated.
-        $($selector)
-                    .append("<a class='"+settings.openmenu+"'>"+settings.openmenutext+"</a>\n\
+        $($selector).append("<a class='"+settings.openmenu+"'>"+settings.openmenutext+"</a>\n\
                              <div class='"+settings.clearclass+"'></div>\n\
                              <div class='"+settings.menucontainer+"'></div>");
 
@@ -67,9 +62,6 @@
                     $('.'+settings.menucontainer).animate({height:0},settings.duration, function(){
                         $('.'+settings.menucontainer).hide();
                     }); 
-                    
-                    
-                    
                 }else{                
                     $(this).addClass(settings.openclass);
                     $('.'+settings.menucontainer).height(0).show();
@@ -79,10 +71,8 @@
                     
                     var paddingtop = $('.'+settings.menucontainer).css('padding-top');
                     var paddingbottom = $('.'+settings.menucontainer).css('padding-top');
-                        
                     paddingtop = parseInt(paddingtop.match(/[0-9]+/g));
                     paddingbottom = parseInt(paddingbottom.match(/[0-9]+/g));
-                    
                     padding = paddingtop + paddingbottom;
                     
                     $newheight = $total * $blockheight + padding;
