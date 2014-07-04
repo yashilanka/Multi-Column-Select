@@ -1,0 +1,47 @@
+/*Hide Select Form Control*/
+.hidden{
+	visibility: hidden;
+	height: 0px;
+	width:0px;
+	position:absolute;
+}
+
+/*Clear class used to push float- can just point to an exsisting clear class*/
+.clear{
+	display:block;
+	clear:both;
+}
+
+/*The container that holds the dropdown items*/
+.menucontainer{
+	width:100%;
+	height:0px;
+	overflow:hidden;
+}
+
+/*The menu items (options)*/
+.menuitem,
+.openmenubutton{
+	box-sizing: border-box;
+	background:#222;
+	color:#FFF;    
+	text-decoration: none;
+	width:25%;
+	float:left;
+	height: 50px;
+	line-height: 50px;
+	border:1px solid #444;
+	text-align: center;
+}
+
+.menuitem.active{
+	background:#FFF;
+	color:#222;
+	border:1px solid #222;
+}
+
+.menuitem:hover{
+	cursor:pointer;
+	background:#555;
+}            
+
