@@ -8,11 +8,15 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
+    
+        <link rel="stylesheet" href="Multi-Column-Select/Multi-Column-Select.css">
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed|Ubuntu' rel='stylesheet' type='text/css'>
+        
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+  
+  
     <title>Multi-column-select by djsmithme</title>
   </head>
 
@@ -39,6 +43,30 @@
 <p>A Simple plugin that will hide the Select control and then display a multicolumn dropdown (css)</p>
 
 <p>Uses the original form control so will work if JS is not enabled and the form can be processed as normal</p>
+
+<div class='wrapper'>
+    
+            <h1>Multi-Column-Dropdown</h1>    
+    
+        
+    <form action="test.php" method="GET">
+
+    <div class="selectcontrol">
+          <select name="car">
+                <option value="Audi">Audi</option>
+                <option value="Bugatti">Bugatti</option>
+                <option value="Chrysler">Chrysler</option>
+                <option value="Daihatsu">Daihatsu</option>
+                <option value="Ford">Ford</option>
+                <option value="GM">General Motors</option>
+                <option value="Honda">Honda</option>
+                <option value="Infiniti">Infiniti</option>
+     </select>
+    </div>
+        <input type="submit" value="Submit" class="btn" />
+    </form>
+    
+    </div>
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
@@ -157,6 +185,30 @@ Include js plugin:
       </div>
     </div>
 
+  <!--[if lt IE 9]>  
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <![endif]-->      
+    <!--[if gte IE 9]><!-->  
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script> 
+    <!--<![endif]-->  
+    
+    <script src="Multi-Column-Select/Multi-Column-Select.js"></script>
+    
+    <script>
+     $(document).ready(function(){
+        $('.selectcontrol').MultiColumnSelect({
+            menuclass : 'columnselect', 
+            openmenu : 'openmenubutton',
+            openmenutext : 'Choose...',
+            menucontainer : 'menucontainer',
+            menuitem : 'menuitem',
+            hideclass : 'hidden',
+            openclass : 'open',
+            clearclass : 'clear',
+            duration : 200
+        });
+     });  
+    </script>
   
   </body>
 </html>
