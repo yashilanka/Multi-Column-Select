@@ -96,9 +96,7 @@
         
         function getwidthaspercent(ele,parent){                        
                      var width = $(ele).width();
-                     alert('width:' + width);
                      var parentWidth = $(parent).width();
-                     alert('parent:' + parentWidth);
                      var percent = 100*width/parentWidth;
                    return Math.round(percent);   
         };
