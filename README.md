@@ -3,16 +3,8 @@
 <p>Jquery CSS Multi Column Select Box</p>
 
 
-<h2>Tested on:</h2>
-<ul>
-<li>IE7+</li>
-<li>Safari</li>
-<li>Firefox </li>
-<li>Chrome</li>
-</ul>
-
-
 <h2>Installation</h2>
+
 <pre>
 
 Load the CSS:
@@ -66,6 +58,16 @@ $(".selectcontrol").MultiColumnSelect({
 
 });
 ```
+
+
+<h2>Tested on</h2>
+<ul>
+<li>IE7+</li>
+<li>Safari</li>
+<li>Firefox </li>
+<li>Chrome</li>
+</ul>
+
 
 <h2>License</h2>
 
