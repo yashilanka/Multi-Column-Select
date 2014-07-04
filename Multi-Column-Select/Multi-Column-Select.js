@@ -61,17 +61,31 @@
         });
 
         //open close the menu
-        $($selector).delegate('a.'+settings.openmenu+'', 'click', function(e){
+        $($selector).delegate('a.'+settings.openmenu, 'click', function(e){
                 if ($(this).hasClass(settings.openclass)){         
                     $(this).removeClass(settings.openclass);
-                    $('.'+settings.menucontainer).animate({height:0},settings.duration);                
+                    $('.'+settings.menucontainer).animate({height:0},settings.duration, function(){
+                        $('.'+settings.menucontainer).hide();
+                    }); 
+                    
+                    
+                    
                 }else{                
                     $(this).addClass(settings.openclass);
-             
+                    $('.'+settings.menucontainer).height(0).show();
                     // Set height = Totat / Column * Real Height of Block
                     $total = Math.round($optioncount / numberofcolumns('.'+settings.menuitem,'.'+settings.menucontainer));
                     $blockheight = trueheight('.'+settings.menuitem); //add the padding
-                    $newheight = $total * $blockheight;
+                    
+                    var paddingtop = $('.'+settings.menucontainer).css('padding-top');
+                    var paddingbottom = $('.'+settings.menucontainer).css('padding-top');
+                        
+                    paddingtop = parseInt(paddingtop.match(/[0-9]+/g));
+                    paddingbottom = parseInt(paddingbottom.match(/[0-9]+/g));
+                    
+                    padding = paddingtop + paddingbottom;
+                    
+                    $newheight = $total * $blockheight + padding;
              
                     //Set the height of the container
                     $('.'+settings.menucontainer).animate({height:$newheight},settings.duration);
@@ -86,7 +100,7 @@
         function trueheight(ele){
             //Padding/Margin and Borders
             var addheight = $(ele).outerHeight(true) - $(ele).innerHeight();
-            var height = $(ele).height();            
+            var height = $(ele).height();              
             return height + addheight;            
         }
               
