@@ -60,7 +60,7 @@
 
         //check for click event
         $('.'+$selector).delegate('a.'+ settings.menuitem, 'click', function(e){ 
-            $('.Menu').val($(this).attr('data')); //bind form value
+           $('.'+$selector).find('select').val($(this).attr('data')); //bind form value
             $('a.'+ settings.menuitem).removeClass('active');
             $(this).addClass('active');
             e.preventDefault();        
