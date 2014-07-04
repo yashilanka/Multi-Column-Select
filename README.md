@@ -43,6 +43,7 @@ Wrap the select control with a div and give that container an ID or class
 
 <h2>Call the plugin</h2>
 
+```javascript
 $(".selectcontrol").MultiColumnSelect({
 
             menuclass : 'multicolumnselect',     // class given to control
@@ -56,7 +57,7 @@ $(".selectcontrol").MultiColumnSelect({
             duration : 200                       // Animation Duration
 
 });
-
+```
 
 <h2>License</h2>
 
