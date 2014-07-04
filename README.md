@@ -25,7 +25,10 @@ Include js plugin:
 
 <h2>Set up your HTML</h2>
 
-div class="selectcontrol"
+```
+<form>
+
+<div class="selectcontrol">
         <select name="car">
           <option value="a">A</option>
           <option value="b">B</option>
@@ -39,6 +42,11 @@ div class="selectcontrol"
         </select>
 </div>
 
+...
+
+</form>
+
+```
 Wrap the select control with a div and give that container an ID or class
 
 <h2>Call the plugin</h2>
