@@ -25,7 +25,7 @@ script src="MultiColumnSelect/MultiColumnSelect.js"
 
 <h2>Set up your HTML</h2>
 
-<div class="selectcontrol">
+div class="selectcontrol"
         <select name="car">
           <option value="a">A</option>
           <option value="b">B</option>
