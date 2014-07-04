@@ -25,11 +25,11 @@
 
             
             
-        $selector = this.selector.replace( ".", "" );
+        $selector = this.selector;
             
         //Plugin Vars
-        $control = $('.'+$selector+' select');
-        $selectoptions = $('.'+$selector+' select option');
+        $control = $($selector+' select');
+        $selectoptions = $($selector+' select option');
         $optioncount = 0;   $optionvals = [];   $optionids = [];
             
             
@@ -38,7 +38,7 @@
         
          //generate menu button and the container below the orginal select box.
         //Adds a clear class so content is pushed down when animated.
-        $('.'+$selector)
+        $($selector)
                     .append("<a class='"+settings.openmenu+"'>"+settings.openmenutext+"</a>\n\
                              <div class='"+settings.clearclass+"'></div>\n\
                              <div class='"+settings.menucontainer+"'></div>");
@@ -53,15 +53,15 @@
 
         // check for click event
         // on option click
-        $('.'+$selector).delegate('a.'+ settings.menuitem, 'click', function(e){ 
-           $('.'+$selector).find('select').val($(this).attr('data')); //bind form value
+        $($selector).delegate('a.'+ settings.menuitem, 'click', function(e){ 
+           $($selector).find('select').val($(this).attr('data')); //bind form value
             $('a.'+ settings.menuitem).removeClass('active');
             $(this).addClass('active');
             e.preventDefault();        
         });
 
         //open close the menu
-        $('.'+$selector).delegate('a.'+settings.openmenu+'', 'click', function(e){
+        $($selector).delegate('a.'+settings.openmenu+'', 'click', function(e){
                 if ($(this).hasClass(settings.openclass)){         
                     $(this).removeClass(settings.openclass);
                     $('.'+settings.menucontainer).animate({height:0},settings.duration);                
