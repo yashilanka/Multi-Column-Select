@@ -38,8 +38,7 @@
         
          //generate menu button and the container below the orginal select box.
         //Adds a clear class so content is pushed down when animated.
-        $($selector)
-                    .append("<a class='"+settings.openmenu+"'>"+settings.openmenutext+"</a>\n\
+        $($selector).append("<a class='"+settings.openmenu+"'>"+settings.openmenutext+"</a>\n\
                              <div class='"+settings.clearclass+"'></div>\n\
                              <div class='"+settings.menucontainer+"'></div>");
 
