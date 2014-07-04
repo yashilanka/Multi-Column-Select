@@ -58,7 +58,8 @@
 
 
 
-        //check for click event
+        // check for click event
+        // on option click
         $('.'+$selector).delegate('a.'+ settings.menuitem, 'click', function(e){ 
            $('.'+$selector).find('select').val($(this).attr('data')); //bind form value
             $('a.'+ settings.menuitem).removeClass('active');
@@ -66,7 +67,7 @@
             e.preventDefault();        
         });
 
-
+        //open close the menu
         $('.'+$selector).delegate('a.'+settings.openmenu+'', 'click', function(e){
                 if ($(this).hasClass(settings.openclass)){         
                     $(this).removeClass(settings.openclass);
@@ -74,7 +75,7 @@
                 }else{                
                     $(this).addClass(settings.openclass);
              
-                    // Totat / 3 * Height of Block
+                    // Set height = Totat / Column * Real Height of Block
                     $total = Math.round($optioncount / numberofcolumns('.'+settings.menuitem));
                     $blockheight = trueheight('.'+settings.menuitem); //add the padding
                     $newheight = $total * $blockheight;
