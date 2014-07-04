@@ -15,11 +15,11 @@
 <h2>Installation</h2>
 <pre>
 
-<!-- Stylesheet-->
-link rel="stylesheet" href="MultiColumnSelect/MultiColumnSelect.css"
+Load the CSS:
+"MultiColumnSelect/MultiColumnSelect.css"
 
-<!-- Include js plugin -->
-script src="MultiColumnSelect/MultiColumnSelect.js"
+Include js plugin:
+"MultiColumnSelect/MultiColumnSelect.js"
 
 </pre>
 
