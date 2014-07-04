@@ -20,25 +20,26 @@ Include js plugin:
 <h2>Set up your HTML</h2>
 
 ```
-<form>
+    <form action="test.php" method="GET">
 
-<div class="selectcontrol">
+    <div class="selectcontrol">
         <select name="car">
-          <option value="a">A</option>
-          <option value="b">B</option>
-          <option value="c">C</option>
-          <option value="d">D</option>
-          <option value="e">E</option>
-          <option value="f">F</option>
-          <option value="a">A</option>
-          <option value="b">B</option>
-          <option value="c">C</option>
-        </select>
-</div>
-
-...
-
-</form>
+                <option value="Audi">Audi</option>
+                <option value="Bugatti">Bugatti</option>
+                <option value="Chrysler">Chrysler</option>
+                <option value="Daihatsu">Daihatsu</option>
+                <option value="Ford">Ford</option>
+                <option value="GM">General Motors</option>
+                <option value="Honda">Honda</option>
+                <option value="Infiniti">Infiniti</option>
+                <option value="Jeep">Jeep</option>
+                <option value="Kia">Kia</option>
+     </select>
+    </div>
+    
+        <input type="submit" value="Submit" />
+    
+    </form>
 
 ```
 Wrap the select control with a div and give that container an ID or class
