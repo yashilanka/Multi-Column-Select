@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Multi-column-select by djsmithme</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Multi-column-select</h1>
+        <h2>Jquery/CSS Multi Column Select Box Replacement.</h2>
+        <a href="https://github.com/djsmithme/Multi-Column-Select" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="multi-column-select" class="anchor" href="#multi-column-select"><span class="octicon octicon-link"></span></a>Multi-Column-Select</h1>
+
+<p><img src="http://www.djsmith.me/PLUGS/mcs/mcs.jpg" alt="alt tag"></p>
+
+<h4>
+<a name="jquery-css-multi-column-select-box" class="anchor" href="#jquery-css-multi-column-select-box"><span class="octicon octicon-link"></span></a>Jquery CSS Multi Column Select Box</h4>
+
+<p>A Simple plugin that will hide the Select control and then display a multicolumn dropdown (css)</p>
+
+<p>Uses the original form control so will work if JS is not enabled and the form can be processed as normal</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<pre>
+
+Load the CSS:
+"MultiColumnSelect/MultiColumnSelect.css"
+
+Include js plugin:
+"MultiColumnSelect/MultiColumnSelect.js"
+
+</pre>
+
+<h2>
+<a name="set-up-your-html" class="anchor" href="#set-up-your-html"><span class="octicon octicon-link"></span></a>Set up your HTML</h2>
+
+<pre><code>    &lt;form action="test.php" method="GET"&gt;
+
+    &lt;div class="selectcontrol"&gt;
+        &lt;select name="car"&gt;
+                &lt;option value="Audi"&gt;Audi&lt;/option&gt;
+                &lt;option value="Bugatti"&gt;Bugatti&lt;/option&gt;
+                &lt;option value="Chrysler"&gt;Chrysler&lt;/option&gt;
+                &lt;option value="Daihatsu"&gt;Daihatsu&lt;/option&gt;
+                &lt;option value="Ford"&gt;Ford&lt;/option&gt;
+                &lt;option value="GM"&gt;General Motors&lt;/option&gt;
+                &lt;option value="Honda"&gt;Honda&lt;/option&gt;
+                &lt;option value="Infiniti"&gt;Infiniti&lt;/option&gt;
+                &lt;option value="Jeep"&gt;Jeep&lt;/option&gt;
+                &lt;option value="Kia"&gt;Kia&lt;/option&gt;
+     &lt;/select&gt;
+    &lt;/div&gt;
+
+        &lt;input type="submit" value="Submit" /&gt;
+
+    &lt;/form&gt;
+
+</code></pre>
+
+<p>Wrap the select control with a div and give that container an ID or class</p>
+
+<h2>
+<a name="css" class="anchor" href="#css"><span class="octicon octicon-link"></span></a>CSS</h2>
+
+<pre><code>.openmenubutton{
+}
+
+.menucontainer{
+        overflow:hidden;            
+        display:none;                    
+}
+
+.menuitem{
+}
+</code></pre>
+
+<h2>
+<a name="call-the-plugin" class="anchor" href="#call-the-plugin"><span class="octicon octicon-link"></span></a>Call the plugin</h2>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">".selectcontrol"</span><span class="p">).</span><span class="nx">MultiColumnSelect</span><span class="p">({</span>
+
+            <span class="nx">menuclass</span> <span class="o">:</span> <span class="s1">'multicolumnselect'</span><span class="p">,</span>     <span class="c1">// class given to control</span>
+            <span class="nx">openmenu</span> <span class="o">:</span> <span class="s1">'openmenubutton'</span><span class="p">,</span>         <span class="c1">// used to toggle menu open/closed</span>
+            <span class="nx">openmenutext</span> <span class="o">:</span> <span class="s1">'Choose'</span><span class="p">,</span>   <span class="c1">// Text for toggle menu button</span>
+            <span class="nx">menucontainer</span> <span class="o">:</span> <span class="s1">'menucontainer'</span><span class="p">,</span>     <span class="c1">// Container Class</span>
+            <span class="nx">menuitem</span> <span class="o">:</span> <span class="s1">'menuitem'</span><span class="p">,</span>               <span class="c1">// Item Class</span>
+            <span class="nx">hideclass</span> <span class="o">:</span> <span class="s1">'hidden'</span><span class="p">,</span>                <span class="c1">// hide Class</span>
+            <span class="nx">openclass</span> <span class="o">:</span> <span class="s1">'open'</span><span class="p">,</span>                  <span class="c1">// Open Class</span>
+            <span class="nx">clearclass</span> <span class="o">:</span> <span class="s1">'clear'</span><span class="p">,</span>                <span class="c1">// Clear Class</span>
+            <span class="nx">duration</span> <span class="o">:</span> <span class="mi">200</span>                       <span class="c1">// Animation Duration</span>
+
+            <span class="c1">//TODO</span>
+
+            <span class="nx">onOpenMenu</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){};</span>
+            <span class="nx">onCloseMenu</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){};</span>
+            <span class="nx">on</span><span class="p">...</span>
+
+            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">additem</span><span class="p">(</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">);</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">additem</span><span class="p">({{</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">},{</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">},{</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">}});</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">removeitem</span><span class="p">(</span><span class="s1">'ID'</span><span class="p">);</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="nx">options</span><span class="p">});</span>
+
+<span class="p">});</span>
+</pre></div>
+
+<h2>
+<a name="tested-on" class="anchor" href="#tested-on"><span class="octicon octicon-link"></span></a>Tested on</h2>
+
+<ul>
+<li>IE7+</li>
+<li>Safari</li>
+<li>Firefox </li>
+<li>Chrome</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The MIT License (MIT)</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/djsmithme/Multi-Column-Select/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/djsmithme/Multi-Column-Select/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/djsmithme/Multi-Column-Select"></a> is maintained by <a href="https://github.com/djsmithme">djsmithme</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
