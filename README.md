@@ -45,15 +45,15 @@ Wrap the select control with a div and give that container an ID or class
 
 $(".selectcontrol").MultiColumnSelect({
 
-            menuclass : 'columnselect',
-            openmenu : 'openmenubutton',
-            openmenutext : 'Choose An Option',
-            menucontainer : 'menucontainer',
-            menuitem : 'menuitem',
-            hideclass : 'hidden',
-            openclass : 'open',
-            clearclass : 'clear',
-            duration : 200
+            menuclass : 'multicolumnselect',     // class given to control
+            openmenu : 'openmenubutton',         // used to toggle menu open/closed
+            openmenutext : 'Choose An Option',   // Text for toggle menu button
+            menucontainer : 'menucontainer',     // Container Class
+            menuitem : 'menuitem',               // Item Class
+            hideclass : 'hidden',                // hide Class
+            openclass : 'open',                  // Open Class
+            clearclass : 'clear',                // Clear Class
+            duration : 200                       // Animation Duration
 
 });
 
