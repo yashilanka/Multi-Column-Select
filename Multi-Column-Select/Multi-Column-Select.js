@@ -38,7 +38,8 @@
         
          //generate menu button and the container below the orginal select box.
         //Adds a clear class so content is pushed down when animated.
-        $($selector).append("<a class='"+settings.openmenu+"'>"+settings.openmenutext+"</a>\n\
+        $($selector)
+                    .append("<a class='"+settings.openmenu+"'>"+settings.openmenutext+"</a>\n\
                              <div class='"+settings.clearclass+"'></div>\n\
                              <div class='"+settings.menucontainer+"'></div>");
 
@@ -68,7 +69,7 @@
                     $(this).addClass(settings.openclass);
              
                     // Set height = Totat / Column * Real Height of Block
-                    $total = Math.round($optioncount / numberofcolumns('.'+settings.menuitem));
+                    $total = Math.round($optioncount / numberofcolumns('.'+settings.menuitem,'.'+settings.menucontainer));
                     $blockheight = trueheight('.'+settings.menuitem); //add the padding
                     $newheight = $total * $blockheight;
              
@@ -89,13 +90,15 @@
             return height + addheight;            
         }
               
-        function numberofcolumns(ele){
-            return Math.round(100 / getwidthaspercent(ele));
+        function numberofcolumns(ele,parent){
+            return Math.round(100 / getwidthaspercent(ele,parent));
         };            
         
-        function getwidthaspercent(ele){                        
+        function getwidthaspercent(ele,parent){                        
                      var width = $(ele).width();
-                     var parentWidth = $(ele).offsetParent().width();
+                     alert('width:' + width);
+                     var parentWidth = $(parent).width();
+                     alert('parent:' + parentWidth);
                      var percent = 100*width/parentWidth;
                    return Math.round(percent);   
         };
