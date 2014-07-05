@@ -3,39 +3,53 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    
-        <link rel="stylesheet" href="Multi-Column-Select/Multi-Column-Select.css">
-        <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed|Ubuntu' rel='stylesheet' type='text/css'>
-        
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  
-  
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
     <title>Multi-column-select by djsmithme</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Multi-column-select</h1>
-        <h2>Jquery/CSS Multi Column Select Box Replacement.</h2>
-        <a href="https://github.com/djsmithme/Multi-Column-Select" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
+    <a id="forkme_banner" href="https://github.com/djsmithme/Multi-Column-Select">View on GitHub</a>
+    <div class="shell">
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Multi-column-select</h1>
+            <h2>Jquery/CSS Multi Column Select Box Replacement.</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/djsmithme/Multi-Column-Select/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/djsmithme/Multi-Column-Select/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
 <a name="multi-column-select" class="anchor" href="#multi-column-select"><span class="octicon octicon-link"></span></a>Multi-Column-Select</h1>
 
-
+<p><img src="http://www.djsmith.me/PLUGS/mcs/mcs.jpg" alt="alt tag"></p>
 
 <h4>
 <a name="jquery-css-multi-column-select-box" class="anchor" href="#jquery-css-multi-column-select-box"><span class="octicon octicon-link"></span></a>Jquery CSS Multi Column Select Box</h4>
@@ -43,45 +57,6 @@
 <p>A Simple plugin that will hide the Select control and then display a multicolumn dropdown (css)</p>
 
 <p>Uses the original form control so will work if JS is not enabled and the form can be processed as normal</p>
-
-<div class='wrapper'>
-    
-    
-      <h3>Before</h3>  
-    <form action="" method="GET">
-<div>
-          <select name="car-default">
-                <option value="Audi">Audi</option>
-                <option value="Bugatti">Bugatti</option>
-                <option value="Chrysler">Chrysler</option>
-                <option value="Daihatsu">Daihatsu</option>
-                <option value="Ford">Ford</option>
-                <option value="GM">General Motors</option>
-                <option value="Honda">Honda</option>
-                <option value="Infiniti">Infiniti</option>
-     </select>
-    </div>
-        <input type="submit" value="Submit" class="btn" />
-    </form>
-    
-            <h3>After</h3>
-             <form action="" method="GET">
-
-    <div class="selectcontrol">
-          <select name="car">
-                <option value="Audi">Audi</option>
-                <option value="Bugatti">Bugatti</option>
-                <option value="Chrysler">Chrysler</option>
-                <option value="Daihatsu">Daihatsu</option>
-                <option value="Ford">Ford</option>
-                <option value="GM">General Motors</option>
-                <option value="Honda">Honda</option>
-                <option value="Infiniti">Infiniti</option>
-     </select>
-    </div>
-        <input type="submit" value="Submit" class="btn" />
-    </form>
-    </div>
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
@@ -154,6 +129,18 @@ Include js plugin:
             <span class="nx">clearclass</span> <span class="o">:</span> <span class="s1">'clear'</span><span class="p">,</span>                <span class="c1">// Clear Class</span>
             <span class="nx">duration</span> <span class="o">:</span> <span class="mi">200</span>                       <span class="c1">// Animation Duration</span>
 
+            <span class="c1">//TODO</span>
+
+            <span class="nx">onOpenMenu</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){};</span>
+            <span class="nx">onCloseMenu</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){};</span>
+            <span class="nx">on</span><span class="p">...</span>
+
+            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">additem</span><span class="p">(</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">);</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">additem</span><span class="p">({{</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">},{</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">},{</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">}});</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">removeitem</span><span class="p">(</span><span class="s1">'ID'</span><span class="p">);</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="nx">options</span><span class="p">});</span>
+
 <span class="p">});</span>
 </pre></div>
 
@@ -169,49 +156,22 @@ Include js plugin:
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>The MIT License (MIT)</p>
-        </section>
+      </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/djsmithme/Multi-Column-Select/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/djsmithme/Multi-Column-Select/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/djsmithme">djsmithme</a> can be found on <a href="https://github.com/djsmithme/Multi-Column-Select">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
 
-          <p class="repo-owner"><a href="https://github.com/djsmithme/Multi-Column-Select"></a> is maintained by <a href="https://github.com/djsmithme">djsmithme</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
     </div>
 
-  <!--[if lt IE 9]>  
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <![endif]-->      
-    <!--[if gte IE 9]><!-->  
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script> 
-    <!--<![endif]-->  
     
-    <script src="Multi-Column-Select/Multi-Column-Select.js"></script>
-    
-    <script>
-     $(document).ready(function(){
-        $('.selectcontrol').MultiColumnSelect({
-            menuclass : 'columnselect', 
-            openmenu : 'openmenubutton',
-            openmenutext : 'Choose...',
-            menucontainer : 'menucontainer',
-            menuitem : 'menuitem',
-            hideclass : 'hidden',
-            openclass : 'open',
-            clearclass : 'clear',
-            duration : 200
-        });
-     });  
-    </script>
-  
   </body>
 </html>
