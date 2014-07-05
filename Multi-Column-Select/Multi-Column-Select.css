@@ -131,6 +131,7 @@ header h1{
 }
 .menuitem.active{
     text-shadow: 0 0 0 #FFF;
+    color:#293b47;
 }
 .menuitem.active:hover{
     background:#FFF;
