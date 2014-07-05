@@ -8,13 +8,30 @@
     <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
     <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
     <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+    <link rel="stylesheet" href="Multi-Column-Select/Multi-Column-Select.css"/>
 
     <script type="text/javascript" src="javascripts/modernizr.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+     <script type="text/javascript" src="Multi-Column-Select/Multi-Column-Select.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('#main_content').headsmart()
+        $('#main_content').headsmart();
+        
+        $(".selectcontrol").MultiColumnSelect({
+
+            menuclass : 'multicolumnselect',     // class given to control
+            openmenu : 'openmenubutton',         // used to toggle menu open/closed
+            openmenutext : 'Choose',   // Text for toggle menu button
+            menucontainer : 'menucontainer',     // Container Class
+            menuitem : 'menuitem',               // Item Class
+            hideclass : 'hidden',                // hide Class
+            openclass : 'open',                  // Open Class
+            clearclass : 'clear',                // Clear Class
+            duration : 200                       // Animation Duration
+
+});
+        
       })
     </script>
     <title>Multi-column-select by djsmithme</title>
@@ -57,6 +74,48 @@
 <p>A Simple plugin that will hide the Select control and then display a multicolumn dropdown (css)</p>
 
 <p>Uses the original form control so will work if JS is not enabled and the form can be processed as normal</p>
+
+<div class="wrapper">
+    
+    
+      <h3>Before</h3>  
+      <div class="clear"></div>
+    <form method="GET" action="">
+<div>
+          <select name="car-default">
+                <option value="Audi">Audi</option>
+                <option value="Bugatti">Bugatti</option>
+                <option value="Chrysler">Chrysler</option>
+                <option value="Daihatsu">Daihatsu</option>
+                <option value="Ford">Ford</option>
+                <option value="GM">General Motors</option>
+                <option value="Honda">Honda</option>
+                <option value="Infiniti">Infiniti</option>
+     </select>
+    </div>
+        <input type="submit" value="Submit">
+    </form>
+    
+            <h3>After</h3>
+             <form method="GET" action="">
+<div class="clear"></div>
+    <div class="selectcontrol">
+          <select name="car" class="columnselect hidden">
+                <option value="Audi">Audi</option>
+                <option value="Bugatti">Bugatti</option>
+                <option value="Chrysler">Chrysler</option>
+                <option value="Daihatsu">Daihatsu</option>
+                <option value="Ford">Ford</option>
+                <option value="GM">General Motors</option>
+                <option value="Honda">Honda</option>
+                <option value="Infiniti">Infiniti</option>
+     </select>
+    <a class="openmenubutton">Choose...</a>
+                             <div class="clear"></div>
+                             <div class="menucontainer" style="height: 0px; display: none;"><a data="Audi" class="menuitem">Audi</a><a data="Bugatti" class="menuitem active">Bugatti</a><a data="Chrysler" class="menuitem">Chrysler</a><a data="Daihatsu" class="menuitem">Daihatsu</a><a data="Ford" class="menuitem">Ford</a><a data="GM" class="menuitem">General Motors</a><a data="Honda" class="menuitem">Honda</a><a data="Infiniti" class="menuitem">Infiniti</a></div></div>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
@@ -128,19 +187,6 @@ Include js plugin:
             <span class="nx">openclass</span> <span class="o">:</span> <span class="s1">'open'</span><span class="p">,</span>                  <span class="c1">// Open Class</span>
             <span class="nx">clearclass</span> <span class="o">:</span> <span class="s1">'clear'</span><span class="p">,</span>                <span class="c1">// Clear Class</span>
             <span class="nx">duration</span> <span class="o">:</span> <span class="mi">200</span>                       <span class="c1">// Animation Duration</span>
-
-            <span class="c1">//TODO</span>
-
-            <span class="nx">onOpenMenu</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){};</span>
-            <span class="nx">onCloseMenu</span><span class="o">:</span> <span class="kd">function</span><span class="p">(){};</span>
-            <span class="nx">on</span><span class="p">...</span>
-
-            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">additem</span><span class="p">(</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">);</span>
-            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">additem</span><span class="p">({{</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">},{</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">},{</span><span class="s1">'ID'</span><span class="p">,</span><span class="s1">'Value'</span><span class="p">}});</span>
-            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">removeitem</span><span class="p">(</span><span class="s1">'ID'</span><span class="p">);</span>
-            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">destroy</span><span class="p">();</span>
-            <span class="nx">$</span><span class="p">.</span><span class="nx">MulticolumnSelect</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="nx">options</span><span class="p">});</span>
-
 <span class="p">});</span>
 </pre></div>
 
