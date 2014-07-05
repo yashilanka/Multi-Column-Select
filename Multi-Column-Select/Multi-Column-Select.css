@@ -63,6 +63,7 @@ form input[type=submit]{
 .openmenubutton:hover{
 background:#00ada9;
 cursor:pointer;
+color:#ffffff;
 }
 form input[type=submit]:hover{
 cursor:pointer;
